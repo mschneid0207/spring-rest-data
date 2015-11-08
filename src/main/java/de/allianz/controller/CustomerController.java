@@ -18,9 +18,6 @@ public class CustomerController {
 	public Customer getCustomer(@PathVariable String id) {
 		System.out.println("id: " + id);
 		
-		
-		System.out.println("juhu");
-		
 		return customerService.getCustomerById(Integer.parseInt(id));
 	}
 
