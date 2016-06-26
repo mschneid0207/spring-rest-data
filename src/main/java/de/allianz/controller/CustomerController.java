@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import de.allianz.entity.Customer;
+import de.allianz.entity.CustomerEntity;
 import de.allianz.service.CustomerService;
 
 @RestController
@@ -15,7 +15,7 @@ public class CustomerController {
 	private CustomerService customerService;
 
 	@RequestMapping("/customer/{id}")
-	public Customer getCustomer(@PathVariable String id) {
+	public CustomerEntity getCustomer(@PathVariable String id) {
 		System.out.println("id: " + id);
 		
 		return customerService.getCustomerById(Integer.parseInt(id));

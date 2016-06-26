@@ -12,7 +12,7 @@ import lombok.Data;
 @Entity
 @Table(name = "CUSTOMER")
 @Data
-public  class Customer {
+public class CustomerEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,12 +21,6 @@ public  class Customer {
 	private String firstName;
 	@Column(name = "LAST_NAME", nullable = false)
 	private String lastName;
-	
-	
-	
-
-	
-
 	
 
 }
